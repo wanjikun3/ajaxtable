@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ajaxtable</title>
+		<link rel="stylesheet" href="jquery.ajaxtable.css">
+	</head>
+	<body>
+		<form id="form1">
+				 <input type="text" name="name" value="" placeholder="用户名">
+				 <button type="submit">搜索</button>
+			 </form>
+				<table class="table ajax-table" data-url="{:url('data')}" data-filter="#form1" data-size="4" data-sizes="4,20,30" >
+					<thead>
+					</thead>
+					<tbody>
+					</tbody>
+					<tfoot>
+					</tfoot>
+				</table>
+		 
+			
+			<script id="tpl_action" type="text/html">
+				<a href="{:url('edit')}?id={{ d.id }}">编辑</a>
+				<a href="{:url('edit')}?id={{ d.id }}">删除</a>
+			</script>
+			<script id="tpl_check" type="text/html">
+				<input type="checkbox" value="{{ d.id }}" name="id[]" >
+			</script>
+			
+		<script src="jquery.min.js"></script>
+		<script src="template-web.js"></script>
+		<script src="query.ajaxtable.js"></script>
+		<script>
+		 
+			$(function(){
+				$(".ajax-table").ajaxtable({
+					url:'111',
+					field:[
+						{'class':'th-check', 'label':'<input type="checkbox" class="ckall">','tpl':'#tpl_check'},
+						{'name':'name','label':'名称','sort':true},
+						{'name':'pass','label':'密码','sort':true},
+						{'name':'pass','label':'操作','class':'th-action', 'tpl':'#tpl_action'}
+					]
+				});
+				$(".ajax-table .ckall").change(function(){
+					$(this).parent().parent().parent().parent().find("input[type='checkbox']").prop("checked",$(this).prop("checked"));
+				})
+				
+			})
+		</script>
+	</body>
+</html>
