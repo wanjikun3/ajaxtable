@@ -1,0 +1,154 @@
+.table {
+	border: solid 1px #eee;
+	border-collapse: collapse;
+	min-width: 100%;
+	display: none;
+}
+
+.table th {
+	border: solid 1px #eee;
+	padding: 8px;
+	background: #f8f8f8;
+	font-size: 14px;
+}
+
+.table td {
+	border: solid 1px #eee;
+	padding: 8px;
+	font-size: 14px;
+}
+
+.table th.th-action {
+	width: 100px;
+}
+
+.table th.th-check {
+	width: 30px;
+	text-align: left;
+}
+
+.sort {
+	cursor: pointer;
+}
+
+.sort span {
+	display: inline-block;
+	width: 10px;
+	height: 20px;
+	margin-left: 5px;
+	position: relative;
+	vertical-align: middle;
+}
+
+.sort i {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-style: dashed;
+	border-color: transparent;
+	position: absolute;
+	left: 0px;
+	border-width: 5px;
+
+}
+
+.sort i.sort-asc {
+	top: 3px;
+	border-top: none;
+	border-bottom-style: solid;
+	border-bottom-color: #b2b2b2
+}
+
+.sort i.sort-desc {
+	bottom: 5px;
+	border-bottom: none;
+	border-top-style: solid;
+	border-top-color: #b2b2b2
+}
+
+.sort i.sort-asc:hover {
+	border-bottom-color: #666;
+}
+
+.sort i.sort-desc:hover {
+	border-top-color: #666;
+}
+
+.sort i.sort-asc.on {
+	border-bottom-color: #000;
+}
+
+.sort i.sort-desc.on {
+	border-top-color: #000;
+}
+
+
+.table input[type='checkbox'] {
+	width: 14px;
+	height: 14px;
+}
+
+.table a {
+	display: inline-block;
+	margin-right: 3px;
+	color: #333;
+	text-decoration: none;
+}
+
+.table a:hover {
+	color: #69c0ff;
+}
+
+.table tfoot td {
+	background: #f8f8f8;
+	font-size: 12px;
+}
+
+.table tfoot td a {
+	padding: 5px 8px;
+}
+
+.table tfoot td span {
+	background: #69c0ff;
+	color: #fff;
+	display: inline-block;
+	padding: 5px 10px;
+}
+
+.table tfoot td input {
+	text-align: center;
+	border: solid 1px #eee;
+	padding: 5px 5px;
+	outline: none;
+	display: inline-block;
+	margin: 0 3px;
+	width: 30px;
+	vertical-align: middle;
+}
+
+.table tfoot td input:focus {
+	border-color: #69C0FF;
+}
+
+.table tfoot td button {
+	cursor: pointer;
+	font-size: 12px;
+	border: solid 1px #eee;
+	background: #fff;
+	vertical-align: middle;
+	padding: 5px 10px;
+	outline: none;
+	display: inline-block;
+	margin: 0 3px;
+}
+
+.table tfoot td select {
+	border: solid 1px #eee;
+	font-size: 12px;
+	background: #fff;
+	vertical-align: middle;
+	padding: 5px 10px;
+	outline: none;
+	display: inline-block;
+	margin: 0 3px;
+}
